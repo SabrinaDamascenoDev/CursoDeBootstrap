@@ -1,2 +1,2 @@
 # CursoDeBootstrap
- Apredendo o framework Bootstrap
+ Apredendo o framework Bootstrap com o curso do Jornada Dev
