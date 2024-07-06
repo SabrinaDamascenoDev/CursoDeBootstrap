@@ -10,8 +10,43 @@
 </head>
 
 <body>
+    <div class="container">
+        <form>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control">
+                <div class="form-text">Não compartilharemos o seu email</div>
+            </div>
+            <div class="mb-3">
+                <label for="senha" class="form-label">senha</label>
+                <input type="password" class="form-control">
+            </div>
+            <div class="mb-3">
+                <input type="checkbox" class="form-check-input">
+                <label for="lembrar">Lembrar de mim</label>
+            </div>
+            <button class="" type="submit">Entrar</button>
+        </form>
+        <hr>
+        <input type="file" class="form-control">
+        <input type="date" class="form-control mt-5">
 
-    
+        <hr>
+        <div class="mb-3">
+            <label for="" class="form-label">Cidade</label>
+            <input type="text" class="form-control" placeholder="Digite para achar..." list="cidades">
+            <datalist id="cidades">
+                <option value="Cidade 1"></option>
+                <option value="Cidade 2"></option>
+                <option value="Cidade 3"></option>
+                <option value="Cidade 4"></option>
+                <option value="Cidade 5"></option>
+                <option value="Cidade 6"></option>
+            </datalist>
+
+        </div>
+    </div>
+
     <a href="../index.html">Voltar ao início</a>
 
 </body>
