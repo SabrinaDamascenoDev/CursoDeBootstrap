@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+
+    <title>Validação formulário</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <h1 class="display-3">Endereço</h1>
+            <form action="POST" class="needs-validation" novalidate>
+            <div class="col-7">
+                <label for="" class="form-label">Labradouro</label>
+                <input type="text" class="form-control" required>
+                <div class="invalid-feedback">Você deve informar o logradoro</div>
+                <div class="valid-feedback">Agora está certo</div>
+            </div>
+            <div class="col-4">
+                <label for="" class="form-label">Número</label>
+                <input type="text" class="form-control">
+            </div>
+            <div class="col-12">
+                <label for="" class="form-label">Estado</label>
+                <input type="text" class="form-control">
+            </div>
+            <div class="col-6">
+                <label for="" class="form-label">Cidade</label>
+                <input type="text" class="form-control">
+            </div>
+            <div class="col-6">
+                <label for="" class="form-label" >CEP</label>
+                <input type="text" class="form-control" pattern="{0-9} {8}" required >
+            </div>
+            <div class="col">
+                <input type="checkbox" name="" class="form-check-input" id="sim">
+                <label for="sim" class="form-label">Aceito os termos de condições</label>
+            </div>
+            <button class="btn btn-primary mt-3 col-4 ms-2">Cadastrar</button>
+        </form>
+        </div>
+    </div>
+    
+    <a href="../index.html">Voltar ao início</a>
+
+</body>
+<script>
+    (() => {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  const forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.from(forms).forEach(form => {
+    form.addEventListener('submit', event => {
+      if (!form.checkValidity()) {
+        event.preventDefault()
+        event.stopPropagation()
+      }
+
+      form.classList.add('was-validated')
+    }, false)
+  })
+})()
+</script>
+</html>
